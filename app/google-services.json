@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "682655316325",
+    "firebase_url": "https://gestordespesasapp.firebaseio.com",
+    "project_id": "gestordespesasapp",
+    "storage_bucket": "gestordespesasapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682655316325:android:7b15512397db60dfac098c",
+        "android_client_info": {
+          "package_name": "br.com.gestor.despesas.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682655316325-uspqq1i5l4b45vmm5tulkursqv0kbn24.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeZnWcP-vlOhXVrmoEHR--ZnFjCV5Na5o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682655316325-uspqq1i5l4b45vmm5tulkursqv0kbn24.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GestorDespesasApp</string>
+    <string name="etNome">Insira seu nome</string>
+    <string name="etSenha">Digite sua senha</string>
+    <string name="btnLogin">LOGIN</string>
+    <string name="btnCadastrar">CADASTRAR</string>
+</resources>
