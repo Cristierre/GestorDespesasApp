@@ -4,4 +4,10 @@
     <string name="etSenha">Digite sua senha</string>
     <string name="btnLogin">LOGIN</string>
     <string name="btnCadastrar">CADASTRAR</string>
+    <string name="etValor">R$</string>
+    <string name="etData">DIA/MES/ANO</string>
+    <string name="tvValor">Valor</string>
+    <string name="tvDataEmissao">Data Emissão</string>
+    <string name="tvDataVencimento">Data Vencimento</string>
+    <string name="tvDescricao">Descrição</string>
 </resources>
