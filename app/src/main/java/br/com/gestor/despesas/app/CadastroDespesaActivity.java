@@ -18,7 +18,6 @@ import java.util.Date;
 public class CadastroDespesaActivity extends AppCompatActivity {
 
     private EditText etValor, etDataEmissao, etDataVencimento, etDescricao;
-    private Button btnSalvar;
 
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
@@ -31,6 +30,8 @@ public class CadastroDespesaActivity extends AppCompatActivity {
         etDataEmissao = findViewById(R.id.etDaraEmissao);
         etDataVencimento = findViewById(R.id.etDataVencimento);
         etDescricao = findViewById(R.id.etDescricao);
+
+        Button btnSalvar = findViewById(R.id.btnSalvarDesp);
 
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override

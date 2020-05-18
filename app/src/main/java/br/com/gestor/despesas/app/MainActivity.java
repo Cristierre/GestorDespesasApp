@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etEmail = findViewById(R.id.etNome);
+        etEmail = findViewById(R.id.etEmail);
         etSenha = findViewById(R.id.etSenha);
 
         btnLogin = findViewById(R.id.btnLogin);
@@ -38,46 +38,50 @@ public class MainActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
-        authStateListener = new FirebaseAuth.AuthStateListener(){
-
+        authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 usuario = auth.getCurrentUser();
-                if( usuario != null ){
-                    Intent intent = new Intent(MainActivity.this, DespesasLista.class);
-                    startActivity( intent );
-                }else {
+                if (usuario != null) {
+                    Intent intent = new Intent(MainActivity.this, ListaDespesa.class);
+                    startActivity(intent);
+                } else {
                     Toast.makeText(MainActivity.this, "Erro ao logar", Toast.LENGTH_LONG).show();
                 }
             }
-
-            private void logar(){
-                String email = etEmail.getText().toString();
-                String senha = etSenha.getText().toString();
-
-                if( !email.isEmpty() && !senha.isEmpty() ){
-                    auth.signInWithEmailAndPassword(email, senha).
-                            addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if( ! task.isSuccessful() ){
-                                        Toast.makeText( MainActivity.this, "Erro ao logar", Toast.LENGTH_LONG).show();
-                                        etSenha.setBackgroundColor(Color.argb(127, 255, 0, 0 ));
-                                        etEmail.setBackgroundColor(Color.argb(127, 255, 0, 0 ));
-                                    }
-                                }
-                            });
-                }
-            }
         };
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logar();
+            }
+        });
 
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
                 startActivity(intent);
             }
         });
+
+    }
+    private void logar () {
+        String email = etEmail.getText().toString();
+        String senha = etSenha.getText().toString();
+
+        if (!email.isEmpty() && !senha.isEmpty()) {
+            auth.signInWithEmailAndPassword(email, senha).
+                    addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (!task.isSuccessful()) {
+                                Toast.makeText(MainActivity.this, "Erro ao logar", Toast.LENGTH_LONG).show();
+                                etSenha.setBackgroundColor(Color.argb(127, 255, 0, 0));
+                                etEmail.setBackgroundColor(Color.argb(127, 255, 0, 0));
+                            }
+                        }
+                    });
+        }
     }
 }

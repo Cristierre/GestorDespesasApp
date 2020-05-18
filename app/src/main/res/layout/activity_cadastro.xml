@@ -8,11 +8,11 @@
     style="@style/constraintStyles">
 
     <EditText
-        android:id="@+id/etNomeCad"
+        android:id="@+id/etEmailCad"
         style="@style/etLogin"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/etNome"
+        android:inputType="textEmailAddress"
+        android:hint="@string/etEmail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +23,7 @@
         android:id="@+id/etSenhaCad"
         style="@style/etLogin"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:hint="@string/etSenha"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
