@@ -1,37 +1,45 @@
 package br.com.gestor.despesas.app;
 
 import java.math.BigDecimal;
-import java.util.Calendar;
 import java.util.Date;
 
 public class Despesa {
-    private BigDecimal valor;
-    private Date dataEmissao;
-    private Date dataVencimento;
+    private String id;
+    private Double valor;
+    private String dataEmissao;
+    private String dataVencimento;
     private String descricao = "";
 
 
-    public BigDecimal getValor() {
+    public Double getValor() {
         return valor;
     }
 
-    public void setValor(BigDecimal valor) {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setValor(Double valor) {
         this.valor = valor;
     }
 
-    public Date getDataEmissao() {
+    public String getDataEmissao() {
         return dataEmissao;
     }
 
-    public void setDataEmissao(Date dataEmissao) {
+    public void setDataEmissao(String dataEmissao) {
         this.dataEmissao = dataEmissao;
     }
 
-    public Date getDataVencimento() {
+    public String getDataVencimento() {
         return dataVencimento;
     }
 
-    public void setDataVencimento(Date dataVencimento) {
+    public void setDataVencimento(String dataVencimento) {
         this.dataVencimento = dataVencimento;
     }
 

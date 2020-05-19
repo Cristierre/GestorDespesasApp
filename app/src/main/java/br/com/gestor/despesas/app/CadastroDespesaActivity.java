@@ -44,9 +44,9 @@ public class CadastroDespesaActivity extends AppCompatActivity {
     private void salvar(){
         try {
             SimpleDateFormat dataFormat = new SimpleDateFormat();
-            BigDecimal valor = new BigDecimal(etValor.getText().toString());
-            Date dataEmissao = dataFormat.parse(etDataEmissao.getText().toString());
-            Date dataVencimento = dataFormat.parse(etDataVencimento.getText().toString());
+            Double valor = Double.parseDouble(etValor.getText().toString());
+            String dataEmissao = etDataEmissao.getText().toString();
+            String dataVencimento = etDataVencimento.getText().toString();
             String descricao = etDescricao.getText().toString();
 
             if (valor != null && dataEmissao != null && dataVencimento != null){
@@ -61,8 +61,8 @@ public class CadastroDespesaActivity extends AppCompatActivity {
                 databaseReference.child("despesa").push().setValue(despesa);
                 finish();
             }
-        }catch (ParseException e){
-
+        }catch (Error e){
+            System.out.println("Erro ao salvar despesa: "+e.getMessage());
         }
 
     }

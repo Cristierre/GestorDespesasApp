@@ -53,7 +53,10 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                logar();
+                //logar();
+                Intent intent = new Intent(MainActivity.this, ListaDespesa.class);
+                startActivity(intent);
+
             }
         });
 

@@ -20,7 +20,7 @@ public class CadastroActivity extends AppCompatActivity {
     EditText etEmail, etSenha;
 
     private FirebaseAuth auth;
-    private FirebaseUser usuario;
+    private  FirebaseUser usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +51,7 @@ public class CadastroActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             usuario = auth.getCurrentUser();
+                            Intent intent = new Intent(CadastroActivity.this, MainActivity.class);
                         }
                     });
         }
