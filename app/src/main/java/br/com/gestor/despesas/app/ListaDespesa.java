@@ -49,7 +49,7 @@ public class ListaDespesa extends AppCompatActivity {
 
         lvDespesa = findViewById(R.id.lvDespesa);
         listaDespesas = new ArrayList<>();
-        adapter = new ArrayAdapter<Despesa>(ListaDespesa.this, android.R.layout.simple_list_item_1, listaDespesas);
+        adapter = new ArrayAdapter<>(ListaDespesa.this, android.R.layout.simple_list_item_1, listaDespesas);
         lvDespesa.setAdapter(adapter);
     }
 
@@ -60,7 +60,7 @@ public class ListaDespesa extends AppCompatActivity {
         listaDespesas.clear();
         database = FirebaseDatabase.getInstance();
         reference = database.getReference();
-        query = reference.child("despesa").child("dataVencimento");
+        query = reference.child("despesa").orderByChild("dataVencimento");
 
         childEventListener = new ChildEventListener() {
             @Override

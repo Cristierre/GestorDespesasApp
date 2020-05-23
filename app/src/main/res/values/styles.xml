@@ -14,6 +14,7 @@
         <item name="android:gravity">center</item>
         <item name="android:textColorHint">#AEFFFFFF</item>
         <item name="android:background">#3EFFFFFF</item>
+        <item name="android:textColor">#fff</item>
     </style>
     <style name="btnLogin" parent="AppTheme">
         <item name="android:layout_width">166dp</item>

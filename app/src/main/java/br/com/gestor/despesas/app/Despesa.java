@@ -1,5 +1,7 @@
 package br.com.gestor.despesas.app;
 
+import androidx.annotation.NonNull;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -49,5 +51,12 @@ public class Despesa {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+
+        return "R$"+valor +"           " +dataEmissao + "          "+dataVencimento +"           "+ descricao;
     }
 }
