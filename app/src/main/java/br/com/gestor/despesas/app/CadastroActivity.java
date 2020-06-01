@@ -52,6 +52,7 @@ public class CadastroActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             usuario = auth.getCurrentUser();
                             Intent intent = new Intent(CadastroActivity.this, MainActivity.class);
+                            startActivity(intent);
                         }
                     });
         }
